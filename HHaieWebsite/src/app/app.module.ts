@@ -7,6 +7,7 @@ import { AboutScreenComponent } from './views/about-screen/about-screen.componen
 import { GameOverviewScreenComponent } from './views/game-overview-screen/game-overview-screen.component';
 import { TeamOverviewScreenComponent } from './views/team-overview-screen/team-overview-screen.component';
 import { NewsScreenComponent } from './views/news-screen/news-screen.component';
+import { CasterScreenComponent } from './views/caster-screen/caster-screen.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NewsScreenComponent } from './views/news-screen/news-screen.component';
     AboutScreenComponent,
     GameOverviewScreenComponent,
     TeamOverviewScreenComponent,
-    NewsScreenComponent
+    NewsScreenComponent,
+    CasterScreenComponent
   ],
   imports: [
     BrowserModule,
