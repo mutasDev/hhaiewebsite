@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TeamOverviewScreenComponent } from './team-overview-screen.component';
+import { TeamScreenComponent } from './team-screen.component';
 
-describe('TeamOverviewScreenComponent', () => {
-  let component: TeamOverviewScreenComponent;
-  let fixture: ComponentFixture<TeamOverviewScreenComponent>;
+describe('TeamScreenComponent', () => {
+  let component: TeamScreenComponent;
+  let fixture: ComponentFixture<TeamScreenComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeamOverviewScreenComponent ]
+      declarations: [ TeamScreenComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TeamOverviewScreenComponent);
+    fixture = TestBed.createComponent(TeamScreenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
