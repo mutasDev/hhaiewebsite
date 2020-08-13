@@ -16,6 +16,10 @@ import { ImpressumScreenComponent } from './views/impressum-screen/impressum-scr
 import { FAQScreenComponent } from './views/faqscreen/faqscreen.component';
 import { SplitInfoComponent } from './components/home/split-info/split-info.component';
 import { BigPanelComponent } from './components/general/big-panel/big-panel.component';
+import { DTITYComponent } from './components/general/dtity/dtity.component';
+import { LogoComponent } from './components/general/logo/logo.component';
+import { PartnerComponent } from './components/home/partner/partner.component';
+import { BottomBarComponent } from './components/general/bottom-bar/bottom-bar.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,10 @@ import { BigPanelComponent } from './components/general/big-panel/big-panel.comp
     FAQScreenComponent,
     SplitInfoComponent,
     BigPanelComponent,
+    DTITYComponent,
+    LogoComponent,
+    PartnerComponent,
+    BottomBarComponent,
   ],
   imports: [
     BrowserModule,
