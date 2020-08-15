@@ -7,7 +7,11 @@
 }
 
 .left {
+  background: #a1001c;
+  z-index: 1;
+  position: absolute;
   width: 50%;
+  height: 80%;
   grid-column: 1;
 }
 
@@ -21,6 +25,25 @@
 }
 
 .right {
+  background: #2d3090;
+  z-index: 1;
+  left: 50%;
+  position: absolute;
   width: 50%;
+  height: 80%;
   grid-column: 2;
+}
+
+.center_button {
+  z-index: 2;
+  left: 42vw; 
+  top: 48vh;
+  position: relative;
+  height: 2vh;
+}
+
+.mat-button {
+  min-width: 16vw; 
+  min-height: 8vh;
+  box-shadow: 1px 2px black;
 }

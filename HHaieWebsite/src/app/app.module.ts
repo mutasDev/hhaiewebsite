@@ -20,7 +20,8 @@ import { DTITYComponent } from './components/general/dtity/dtity.component';
 import { LogoComponent } from './components/general/logo/logo.component';
 import { PartnerComponent } from './components/home/partner/partner.component';
 import { BottomBarComponent } from './components/general/bottom-bar/bottom-bar.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,9 @@ import { BottomBarComponent } from './components/general/bottom-bar/bottom-bar.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
