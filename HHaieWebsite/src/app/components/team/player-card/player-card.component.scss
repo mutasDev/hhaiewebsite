@@ -1,4 +1,10 @@
 .player_photo_wrapper {
-  width: 100%;
-  height: 100%;
+  width: 10vw;
+
+}
+
+mat-card {
+  object-fit: contain;
+  display: relative;
+
 }

@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { EventEmitter } from 'events';
 
 @Component({
-  selector: 'app-game-selection',
-  templateUrl: './game-selection.component.html',
-  styleUrls: ['./game-selection.component.scss']
+  selector: "app-game-selection",
+  templateUrl: "./game-selection.component.html",
+  styleUrls: ["./game-selection.component.scss"],
 })
 export class GameSelectionComponent implements OnInit {
 
-  constructor() { }
+  private game: string;
+  public gameChangeEmitter: EventEmitter;
 
-  ngOnInit() {
+  constructor() {
+    this.gameChangeEmitter = new EventEmitter();
   }
 
+  ngOnInit() {}
 }
