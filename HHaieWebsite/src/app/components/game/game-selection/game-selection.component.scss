@@ -9,6 +9,10 @@
 
 .game_icon {
   object-fit: contain;
-  width: 10vw;
-  height: 10vh;
+  width: 15vw;
+  height: 15vh;
+}
+
+.game_icon:hover {
+  transform: scale(1.1);
 }
