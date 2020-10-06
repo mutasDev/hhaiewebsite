@@ -28,4 +28,9 @@ export class TopMenuComponent implements OnInit {
     this.router.navigateByUrl("/teams");
   }
 
+  scrollToTop() {
+    this.router.navigateByUrl("/home");
+    window.scrollTo(0, 0);
+  }
+
 }

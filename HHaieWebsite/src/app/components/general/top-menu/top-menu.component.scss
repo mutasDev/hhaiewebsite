@@ -1,9 +1,9 @@
 .span_wrapper {
-  margin-left: 10vw;
+  margin-left: 8vw;
 }
 
 span {
-  margin-left: 15%;
+  margin-left: 10vw;
 }
 
 .fixed {
@@ -16,4 +16,13 @@ span {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+mat-toolbar {
+  background-color: #2e3190;
+}
+
+.button {
+  color: white;
+  font-size: 1em;
 }
