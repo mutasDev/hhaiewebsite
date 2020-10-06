@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-menu',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
-  constructor() { }
+  private router: Router;
+  constructor(router: Router) {
+    this.router = router;
+   }
 
   ngOnInit() {
+  }
+
+  routeHome() {
+    this.router.navigateByUrl("home");
+  }
+
+  routeAboutUs() {
+    this.router.navigateByUrl("/about");
+  }
+
+  routeTeams() {
+    this.router.navigateByUrl("/teams");
   }
 
 }

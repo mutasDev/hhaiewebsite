@@ -22,6 +22,9 @@ import { PartnerComponent } from './components/home/partner/partner.component';
 import { BottomBarComponent } from './components/general/bottom-bar/bottom-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +51,8 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

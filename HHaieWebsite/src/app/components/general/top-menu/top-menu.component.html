@@ -1,1 +1,8 @@
-<p>top-menu works!</p>
+<mat-toolbar class="fixed">
+  <app-logo class="fixed"></app-logo>
+  <div class="span_wrapper">
+    <span> <button mat-button (click)="routeHome()">Home</button></span>
+    <span> <button mat-button (click)="routeAboutUs()">Über uns</button></span>
+    <span> <button mat-button (click)="routeTeams()">Abteilungen</button></span>
+  </div>
+</mat-toolbar>
