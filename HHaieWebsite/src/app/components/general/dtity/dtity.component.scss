@@ -1,0 +1,15 @@
+.dtity_wrapper{
+    float:right;
+    margin-top: 1vw;
+    margin-right: 5vw;
+    display:grid;
+    width: 30%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    column-gap: 8%;
+    object-fit: contain;
+}
+.socialbutton{
+    
+    width: 100%;
+    height: auto;
+}
