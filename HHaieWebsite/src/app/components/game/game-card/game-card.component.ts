@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { GameChoiceService } from 'src/app/services/game-choice.service';
 
 @Component({
   selector: 'app-game-card',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameCardComponent implements OnInit {
 
-  constructor() { }
+  private gameChoiceService: GameChoiceService;
+  private cd: ChangeDetectorRef;
+
+  constructor(gameChoiceService: GameChoiceService, cd: ChangeDetectorRef) {
+    this.gameChoiceService = gameChoiceService;
+    this.cd = cd;
+   }
+
+
+
+
+  getGame() {
+    this.gameChoiceService.getChosenGame();
+  }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
+    this.cd.detectChanges();
   }
 
 }

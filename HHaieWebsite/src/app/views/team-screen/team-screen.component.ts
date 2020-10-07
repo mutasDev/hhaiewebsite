@@ -20,7 +20,8 @@ export class TeamScreenComponent implements OnInit {
     this.game = this.gameChoiceService.getChosenGame();
   }
 
-  changeGame(game: string) {
-    this.game = game;
+  changeGame() {
+    this.game = this.gameChoiceService.getChosenGame();
   }
+
 }

@@ -4,7 +4,9 @@
       (gameChangeEmitter)="changeGame($event)"
     ></app-game-selection>
   </div>
-  <div class="teams_wrapper"></div>
+  <div class="teams_wrapper">
+    <app-game-card *ngIf="this.game !== 'none'"></app-game-card>
+  </div>
   <div class="players_wrapper">
     <app-player-card></app-player-card>
   </div>
