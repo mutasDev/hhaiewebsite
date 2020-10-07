@@ -24,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material';
+import { GameCardComponent } from './components/game/game-card/game-card.component';
+import { TeamSelectComponent } from './components/team/team-select/team-select.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { MatToolbarModule } from '@angular/material';
     LogoComponent,
     PartnerComponent,
     BottomBarComponent,
+    GameCardComponent,
+    TeamSelectComponent,
   ],
   imports: [
     BrowserModule,
