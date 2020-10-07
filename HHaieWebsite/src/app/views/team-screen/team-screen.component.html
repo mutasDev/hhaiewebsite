@@ -1,2 +1,11 @@
-<app-game-selection (teamSelect)="changeGame($event)"></app-game-selection>
-<app-player-card ></app-player-card>
+<div class="team_screen_wrapper">
+  <div class="game_select_wrapper">
+    <app-game-selection
+      (gameChangeEmitter)="changeGame($event)"
+    ></app-game-selection>
+  </div>
+  <div class="teams_wrapper"></div>
+  <div class="players_wrapper">
+    <app-player-card></app-player-card>
+  </div>
+</div>

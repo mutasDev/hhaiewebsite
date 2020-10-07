@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-screen',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeScreenComponent implements OnInit {
 
-  constructor() { }
+  private router: Router;
+
+  constructor(router: Router) {
+    this.router = router;
+   }
+
+   routeToTeams() {
+     this.router.navigateByUrl("/teams");
+   }
 
   ngOnInit() {
   }

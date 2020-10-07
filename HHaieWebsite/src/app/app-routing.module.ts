@@ -5,6 +5,7 @@ import { TeamScreenComponent } from './views/team-screen/team-screen.component';
 import { AboutScreenComponent } from './views/about-screen/about-screen.component';
 import { ImpressumScreenComponent } from './views/impressum-screen/impressum-screen.component';
 import { FAQScreenComponent } from './views/faqscreen/faqscreen.component';
+import { NewsScreenComponent } from './views/news-screen/news-screen.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutScreenComponent},
   { path: 'teams', component: TeamScreenComponent},
   { path: 'impressum', component: ImpressumScreenComponent},
+  { path: 'news', component: NewsScreenComponent},
   { path: 'faq', component: FAQScreenComponent},
   { path: '**', component: HomeScreenComponent},
 ];

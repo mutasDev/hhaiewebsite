@@ -28,6 +28,14 @@ export class TopMenuComponent implements OnInit {
     this.router.navigateByUrl("/teams");
   }
 
+  routeFAQ() {
+    this.router.navigateByUrl("/faq");
+  }
+
+  routeNews() {
+    this.router.navigateByUrl("/news");
+  }
+
   scrollToTop() {
     this.router.navigateByUrl("/home");
     window.scrollTo(0, 0);
