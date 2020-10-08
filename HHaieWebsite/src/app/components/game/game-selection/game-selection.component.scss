@@ -1,10 +1,15 @@
+.game_selection_wrapper {
+  
+}
 .game_grid {
+  
   margin-top: 5%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   row-gap: 40%;
   grid-template-rows: 50% 50%;
   margin-bottom: 5%;
+  
 }
 
 .game_icon {

@@ -1,4 +1,6 @@
 <app-big-panel></app-big-panel>
-<!--app-split-info></app-split-info> <!-- RESPONSIBLE FOR BIG WHITE SPACE ON THE SIDE ?? X overflow-->
-<app-game-selection (gameChangeEmitter)="routeToTeams()"></app-game-selection>
+<app-split-info></app-split-info> <!-- RESPONSIBLE FOR BIG WHITE SPACE ON THE SIDE ?? X overflow-->
+<div class="homescreenGameSelection">
+    <app-game-selection  (gameChangeEmitter)="routeToTeams()"></app-game-selection>
+</div>
 <app-partner></app-partner>
