@@ -11,7 +11,6 @@ import { TeamCardComponent } from './components/team/team-card/team-card.compone
 import { GameSelectionComponent } from './components/game/game-selection/game-selection.component';
 import { HomeScreenComponent } from './views/home-screen/home-screen.component';
 import { TeamScreenComponent } from './views/team-screen/team-screen.component';
-import { HeaderComponent } from './components/general/header/header.component';
 import { ImpressumScreenComponent } from './views/impressum-screen/impressum-screen.component';
 import { FAQScreenComponent } from './views/faqscreen/faqscreen.component';
 import { SplitInfoComponent } from './components/home/split-info/split-info.component';
@@ -26,6 +25,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material';
 import { GameCardComponent } from './components/game/game-card/game-card.component';
 import { TeamSelectComponent } from './components/team/team-select/team-select.component';
+import { ErstiViewComponent } from './views/ersti-view/ersti-view.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,6 @@ import { TeamSelectComponent } from './components/team/team-select/team-select.c
     GameSelectionComponent,
     HomeScreenComponent,
     TeamScreenComponent,
-    HeaderComponent,
     ImpressumScreenComponent,
     FAQScreenComponent,
     SplitInfoComponent,
@@ -49,6 +48,7 @@ import { TeamSelectComponent } from './components/team/team-select/team-select.c
     BottomBarComponent,
     GameCardComponent,
     TeamSelectComponent,
+    ErstiViewComponent,
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,10 @@ export class TopMenuComponent implements OnInit {
     this.router.navigateByUrl("/about");
   }
 
+  routeErstis() {
+    this.router.navigateByUrl("/erstis");
+  }
+
   routeTeams() {
     this.router.navigateByUrl("/teams");
   }

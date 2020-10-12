@@ -6,6 +6,7 @@ import { AboutScreenComponent } from './views/about-screen/about-screen.componen
 import { ImpressumScreenComponent } from './views/impressum-screen/impressum-screen.component';
 import { FAQScreenComponent } from './views/faqscreen/faqscreen.component';
 import { NewsScreenComponent } from './views/news-screen/news-screen.component';
+import { ErstiViewComponent } from './views/ersti-view/ersti-view.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'impressum', component: ImpressumScreenComponent},
   { path: 'news', component: NewsScreenComponent},
   { path: 'faq', component: FAQScreenComponent},
+  { path: 'erstis', component: ErstiViewComponent},
   { path: '**', component: HomeScreenComponent},
 ];
 
