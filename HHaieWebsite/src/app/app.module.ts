@@ -22,7 +22,7 @@ import { BottomBarComponent } from './components/general/bottom-bar/bottom-bar.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MatToolbarModule } from '@angular/material';
+import {  MatDialogModule, MatToolbarModule } from '@angular/material';
 import { GameCardComponent } from './components/game/game-card/game-card.component';
 import { TeamSelectComponent } from './components/team/team-select/team-select.component';
 import { ErstiViewComponent } from './views/ersti-view/ersti-view.component';
@@ -57,6 +57,7 @@ import { ErstiViewComponent } from './views/ersti-view/ersti-view.component';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
