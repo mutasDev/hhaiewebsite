@@ -4,4 +4,9 @@
 $hhaie_blue: #2d3090;
 $hhaie_red: #a1001c;
 html, body { height: 100%; width: 100vw; }
-body { margin: 0; font-family: Bebas, sans-serif; overflow-x: hidden}
+body { margin: 0; font-family: Arial, sans-serif; overflow-x: hidden}
+
+
+mat-dialog-container {
+  background-color: #2d3090 !important;
+}

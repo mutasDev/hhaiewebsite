@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material";
+import { JoinComponent } from '../../general/join/join.component';
 
 @Component({
   selector: "app-split-info",
@@ -12,9 +13,8 @@ export class SplitInfoComponent implements OnInit {
   ngOnInit() {}
 
   onJoinClick() {
-    const dialogref = this.dialog.open(DialogContent);
-
-    dialogref.afterClosed().subscribe(result => console.log("ok"));
+    const dialogref = this.dialog.open(JoinComponent, {
+      height: '85%', width: '80%',
+    });
   }
 }
-export class DialogContent {}

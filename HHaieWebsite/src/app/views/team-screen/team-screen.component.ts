@@ -8,7 +8,7 @@ import { GameChoiceService } from 'src/app/services/game-choice.service';
 })
 export class TeamScreenComponent implements OnInit {
 
-  private game: string;
+  public game: string;
 
   private gameChoiceService: GameChoiceService;
 
