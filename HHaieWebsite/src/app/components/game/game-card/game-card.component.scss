@@ -1,0 +1,24 @@
+.game_wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;;
+}
+.game_title {
+  width: 90vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.game_text {
+  width: 90vw;
+  text-align: justify;
+  font-size: 3vw;
+}

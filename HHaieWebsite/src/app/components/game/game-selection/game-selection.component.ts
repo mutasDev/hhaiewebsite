@@ -21,6 +21,8 @@ export class GameSelectionComponent implements OnInit {
 
   swapGame(game: string) {
     this.gameChoiceService.chooseGame(game);
+    console.log(game);
+    console.log(this.gameChoiceService.getChosenGame());
     this.gameChangeEmitter.emit();
   }
 
