@@ -1,21 +1,26 @@
 .partner_wrapper {
-  margin-top: 20%;
+  margin-top: 10%;
   margin-bottom: 10%;
 }
 
 .partner_text {
   padding-left: 35%;
-  font-size: 4em;
+  font-size: 4vw;
 }
 
 .partner_grid {
-  padding-left: 20%;
   margin-top: 5%;
-  display: grid;
-  grid-template-columns: 20% 20% 20% ;
+  display: flex;
+  justify-content: center;
 }
 
 .partner_icon {
   width: 10vw;
   height: 10vw;
+  object-fit: contain;
+  margin: auto;
+}
+
+.partner_icon:hover {
+  transform: scale(1.1);
 }

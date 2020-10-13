@@ -1,19 +1,25 @@
 .text_block {
   position: absolute;
   left: 50%;
+  width: 100%;
 }
 
 img {
-  object-fit: scale-down;
+  object-fit: none;
   align-self: center;
 }
 
 .mat-typography {
-  font-size: 1vw;
+  font-size: 1.5vw;
   color: white;
+  line-height: 1.7vw;
 }
 
 h3 {
-  margin-top: 10%;
-  font-size: 1.5vw;
+  margin-top: 5%;
+  font-size: 2vw;
+}
+
+a:link {
+  color: white;
 }
