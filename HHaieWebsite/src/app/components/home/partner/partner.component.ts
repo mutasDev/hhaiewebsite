@@ -12,4 +12,7 @@ export class PartnerComponent implements OnInit {
   ngOnInit() {
   }
 
+  openLink(url: string) {
+    window.open(url, "blank");
+  }
 }
