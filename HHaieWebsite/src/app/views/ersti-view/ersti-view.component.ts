@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-ersti-view',
   templateUrl: './ersti-view.component.html',
@@ -12,4 +13,9 @@ export class ErstiViewComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToLink(url: string)
+  {
+    window.open(url, "blank");
+  }
+  
 }

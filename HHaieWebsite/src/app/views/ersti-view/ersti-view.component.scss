@@ -1,13 +1,157 @@
 .ersti_wrapper {
   width: 100vw;
-  height: 100%;
 }
 
-infoabende_wrapper {
+.infoabende_wrapper
+{
+   width: 100vw;
+   height: 70vh;
+   margin-top: -1%;
 }
 
-cup_wrapper {
+.infoabend_pic {
+  z-index: 0;
+  object-fit: cover;
+  height: 70vh;
+  width: 100vw;
+  filter: brightness(50%);
 }
 
-worlds_wrapper {
+.infoabende_text {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  font-size: 2.5vw;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.discbutton {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color:  #2d3090;
+}
+
+.CSButton {
+  color: white;
+  background-color:  #2d3090;
+}
+
+.cup_wrapper {
+  display: grid;
+  width: 100vw;
+  height: 33vw;
+  grid-template-columns: 33vw 33vw 33vw;
+  grid-template-rows: 33vw;
+}
+
+.worlds_wrapper {
+   width: 100vw;
+   height: 70vh;
+}
+
+.worlds_pic {
+  object-fit: cover;
+  width: 100vw;
+  height: 70vh;
+  filter:brightness(50%);
+}
+
+.CSdiv{
+  grid-column: 1;
+  object-fit: cover;
+}
+
+.CS {
+  object-fit: cover;
+  width: 33vw;
+  height: 33vw;
+}
+
+.cs_text {
+  text-align: center;
+  font-size: 1.5vw;
+  display: block;
+  z-index: 1;
+  color: white;
+  width: 60%;
+  height: auto;
+  left: 16%;
+  top: 100%;
+  position: absolute;
+  transform: translate(-50%, -20%);
+}
+
+.CUPdiv{
+  grid-column: 2;
+
+}
+
+.cupinfo{
+  object-fit: cover;
+  width: 33vw;
+  height: 33vw;
+}
+
+.cuptext {
+  text-align: center;
+  font-size: 1.5vw;
+  display: block;
+  z-index: 1;
+  color: white;
+  width: 60%;
+  height: auto;
+  left: 50%;
+  top: 100%;
+  position: absolute;
+  transform: translate(-50%, -20%);
+}
+
+
+.RLtext {
+  text-align: center;
+  font-size: 1.5vw;
+  display: block;
+  z-index: 1;
+  color: white;
+  width: 60%;
+  height: auto;
+  left: 83%;
+  top: 100%;
+  position: absolute;
+  transform: translate(-50%, -20%);
+}
+
+.RLdiv{
+  grid-column: 3;
+
+}
+.RL {
+  object-fit: cover;
+  width: 33vw;
+  height: 33vw;
+}
+
+.worldstext {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color:white;
+  width: 60%;
+  font-size: 3vw;
+  left: 50%;
+  top: 225%;
+  transform: translate(-50%,  -250%);
+}
+
+.worlds_pic {
+  z-index: 0;
+  object-fit:cover;
+  position: absolute;
 }
