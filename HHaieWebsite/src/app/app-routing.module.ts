@@ -10,13 +10,13 @@ import { ErstiViewComponent } from './views/ersti-view/ersti-view.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeScreenComponent},
-  { path: 'about', component: AboutScreenComponent},
-  { path: 'teams', component: TeamScreenComponent},
-  { path: 'impressum', component: ImpressumScreenComponent},
-  { path: 'news', component: NewsScreenComponent},
-  { path: 'faq', component: FAQScreenComponent},
-  { path: 'erstis', component: ErstiViewComponent},
+  { path: '', component: HomeScreenComponent, pathMatch: "full"},
+  { path: 'about', component: AboutScreenComponent, pathMatch: "full"},
+  { path: 'teams', component: TeamScreenComponent, pathMatch: "full"},
+  { path: 'impressum', component: ImpressumScreenComponent, pathMatch: "full"},
+  { path: 'news', component: NewsScreenComponent, pathMatch: "full"},
+  { path: 'faq', component: FAQScreenComponent, pathMatch: "full"},
+  { path: 'erstis', component: ErstiViewComponent, pathMatch: "full"},
   { path: '**', component: HomeScreenComponent},
 ];
 
