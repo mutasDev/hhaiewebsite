@@ -11,11 +11,12 @@ export class ErstiViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
   goToLink(url: string)
   {
     window.open(url, "blank");
   }
-  
+
 }

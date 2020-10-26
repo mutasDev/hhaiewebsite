@@ -19,6 +19,7 @@ export class TeamScreenComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.game = this.gameChoiceService.getChosenGame();
   }
 
