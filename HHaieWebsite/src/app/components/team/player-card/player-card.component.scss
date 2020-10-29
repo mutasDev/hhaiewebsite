@@ -5,6 +5,10 @@
 mat-card {
   margin-top:6%;
   object-fit: contain;
-  display: relative;
+  display: block;
+  width: fit-content
+}
 
+.player_name {
+  text-align: center;
 }
