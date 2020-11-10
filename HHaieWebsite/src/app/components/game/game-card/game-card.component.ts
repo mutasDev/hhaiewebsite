@@ -54,6 +54,7 @@ export class GameCardComponent implements OnInit {
     this.titles.set("hs", "Hearthstone");
     this.titles.set("ssbu", "Super Smash Bros. Ultimate");
     this.titles.set("vl", "Valorant");
+    this.titles.set("fifa", "Fifa");
 
     this.texts.set(
       "lol",
@@ -93,6 +94,11 @@ export class GameCardComponent implements OnInit {
     this.texts.set(
       "ssbu",
       "Bisher wird Smash noch nicht in der Uniliga gespielt, jedoch ist dies in nächster Zeit geplant. Wir haben bereits einige Spieler die in der Hamburger Smashszene unterwegs sind und freuen uns immer über Verstärkung. "
+    )
+
+    this.texts.set(
+      "fifa",
+      "Auch wir steigen mit FIFA in den e-Soccer ein. Wenn ihr beim Aufbau der neuesten Abteilung dabei sein wollt, meldet euch gerne bei uns."
     )
     this.initialize();
   }
