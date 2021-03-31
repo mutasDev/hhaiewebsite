@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Documents/swarm-forschungsprojekt/eurekaserver" value="PREVIEW" />
+        <entry key="$USER_HOME$/Documents/swarm-forschungsprojekt/gateway" value="PREVIEW" />
+        <entry key="$USER_HOME$/Documents/swarm-forschungsprojekt/pcssoservice" value="PREVIEW" />
+        <entry key="$USER_HOME$/Documents/swarm-forschungsprojekt/userservice" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/exercise-10-solution/exercise-10-solution" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../abschlussaufgabe" value="PREVIEW" />
+        <entry key="D:/SWARM-REPO/eurekaserver" value="PREVIEW" />
+        <entry key="D:/SWARM-REPO/fileservice" value="PREVIEW" />
+        <entry key="D:/SWARM-REPO/gateway" value="PREVIEW" />
+        <entry key="D:/SWARM-REPO/pcssoservice" value="PREVIEW" />
+        <entry key="D:/SWARM-REPO/productservice" value="PREVIEW" />
+        <entry key="D:/SWARM-REPO/smtpservice" value="PREVIEW" />
+        <entry key="D:/SWARM-REPO/userservice" value="PREVIEW" />
+        <entry key="D:/Swarm/eurekaserver" value="PREVIEW" />
+        <entry key="D:/Swarm/gateway" value="PREVIEW" />
+        <entry key="D:/Swarm/pcssoservice" value="PREVIEW" />
+        <entry key="D:/Swarm/productservice" value="PREVIEW" />
+        <entry key="D:/Swarm/userservice" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2051" />
+    <option name="y" value="-19" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
