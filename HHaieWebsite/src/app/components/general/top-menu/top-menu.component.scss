@@ -1,13 +1,12 @@
 .span_wrapper {
   margin-left: 8vw;
+  display: flex;
+  justify-content: space-between;
 }
-
-span {
-  margin-left: 10vw;
+.span {
+  width: 33%;
 }
-
 .fixed {
-  z-index: 3;
   position: fixed;
   left: 0;
   top: 0;

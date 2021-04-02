@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-top-menu',
   templateUrl: './top-menu.component.html',
@@ -8,12 +7,18 @@ import { Router } from '@angular/router';
 })
 export class TopMenuComponent implements OnInit {
 
-  private router: Router;
-  constructor(router: Router) {
-    this.router = router;
+  public screenWidth: number;
+  public screenHeight: number;
+  constructor(private router: Router) {
    }
 
   ngOnInit() {
+  }
+
+  @HostListener('window-resize', ['$event'])
+  onResize(event?) {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
   }
 
   routeHome() {

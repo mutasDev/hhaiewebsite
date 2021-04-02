@@ -1,4 +1,4 @@
-<app-top-menu></app-top-menu>
+<app-top-menu *ngIf="this.screenWidth > 100"></app-top-menu>
 <div style="height: 6%"></div>
 <!-- TODO : Add material  and divider-->
 <router-outlet></router-outlet>

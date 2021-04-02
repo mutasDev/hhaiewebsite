@@ -29,6 +29,7 @@ import { GameCardComponent } from "./components/game/game-card/game-card.compone
 import { TeamSelectComponent } from "./components/team/team-select/team-select.component";
 import { ErstiViewComponent } from "./views/ersti-view/ersti-view.component";
 import { JoinComponent } from "./components/general/join/join.component";
+import { MatTabsModule } from "@angular/material/tabs"
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { JoinComponent } from "./components/general/join/join.component";
     MatCardModule,
     MatToolbarModule,
     MatDialogModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
