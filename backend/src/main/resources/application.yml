@@ -1,0 +1,21 @@
+spring:
+  storagePath: "/storage"
+  datasource:
+  url: jdbc:postgresql://localhost:5432/backend
+  username: backend
+  password: backend
+  jpa:
+  hibernate:
+  ddl-auto: update
+  show-sql: false
+  open-in-view: false
+  properties:
+  generate_statistics: false
+  order_inserts: true
+  jdbc:
+  batch_size: 1000
+  format_sql: true
+  enable_lazy_load_no_trans: true
+  event:
+  merge:
+  entity_copy_observer: allow

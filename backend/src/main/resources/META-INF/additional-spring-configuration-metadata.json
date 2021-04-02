@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "spring",
+      "type": "java.lang.String",
+      "description": "Description for spring."
+    },
+    {
+      "name": "spring.storagePath",
+      "type": "java.lang.String",
+      "description": "Description for spring.storagePath."
+    }
+  ] }
