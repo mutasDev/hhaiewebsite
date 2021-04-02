@@ -1,15 +1,9 @@
-package com.hhaie.backend.model;
+package com.hhaie.backend.model.dto;
 
 import lombok.Data;
 
-import javax.persistence.*;
-
-@Entity
 @Data
-public class Player {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PlayerDto {
     private Long id;
 
     private String foreName;

@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id:  1
+      author:  mutas
+      changes:
+        - createTable:
+            tableName:  player
+            columns:
+              - column:
+                  name:  id
+                  type:  bigint
+                  autoIncrement:  true
+                  constraints:
+                    primaryKey:  true
+                    nullable:  false
+              - column:
+                  name:  fore_name
+                  type:  varchar(50)
+              - column:
+                  name:  last_name
+                  type:  varchar(50)
+              - column:
+                  name:  nick_name
+                  type:  varchar(50)
+              - column:
+                  name: picture_id
+                  type: varchar(200)
+              - column:
+                  name: position
+                  type: varchar(50)

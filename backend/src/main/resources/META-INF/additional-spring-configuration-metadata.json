@@ -9,5 +9,15 @@
       "name": "spring.storagePath",
       "type": "java.lang.String",
       "description": "Description for spring.storagePath."
+    },
+    {
+      "name": "application.name",
+      "type": "java.lang.String",
+      "description": "Description for application.name."
+    },
+    {
+      "name": "spring.filepath",
+      "type": "java.lang.String",
+      "description": "Description for spring.filepath."
     }
   ] }

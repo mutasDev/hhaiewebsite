@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: changelogs/001_createTable_Player.yaml
+  - include:
+      file: changelogs/002_createTable_Team.yaml

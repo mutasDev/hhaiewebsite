@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_teams
+      author:  mutas
+      changes:
+        - createTable:
+            tableName:  team
+            columns:
+              - column:
+                  name:  id
+                  type:  bigint
+                  autoIncrement:  true
+                  constraints:
+                    primaryKey:  true
+                    nullable:  false
+              - column:
+                  name:  name
+                  type:  varchar(50)
+              - column:
+                  name:  league
+                  type:  varchar(50)
+  - changeSet:
+      id: create_team_player
+      author: mutas
+      changes:
+        - createTable:
+            tableName:  team_player
+            columns:
+             - column:
+                name: team_id
+                type: bigint
+             - column:
+                name: player_id
+                type: bigint
+
+  - changeSet:
+      id: connect_team_player_team
+      author: mutas
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: team_id
+            baseTableName: team_player
+            constraintName: fk_team_player_team_id
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: team
+            validate: true
+  - changeSet:
+      id: connect_team_player_player
+      author: mutas
+      changes:
+       - addForeignKeyConstraint:
+           baseColumnNames: player_id
+           baseTableName: team_player
+           constraintName: fk_team_player_player_id
+           deferrable: false
+           initiallyDeferred: false
+           onDelete: NO ACTION
+           onUpdate: NO ACTION
+           referencedColumnNames: id
+           referencedTableName: player
+           validate: true

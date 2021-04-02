@@ -6,6 +6,7 @@ import com.hhaie.backend.model.files.dto.FileInfoDto;
 import com.hhaie.backend.repository.FileInfoRepository;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.FileNotFoundException;
@@ -15,6 +16,7 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+@Service
 public class FileInfoService {
 
     private final FileserviceConfig config;
