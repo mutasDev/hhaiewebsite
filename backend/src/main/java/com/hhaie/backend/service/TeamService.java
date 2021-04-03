@@ -2,7 +2,6 @@ package com.hhaie.backend.service;
 
 import com.hhaie.backend.model.Player;
 import com.hhaie.backend.model.Team;
-import com.hhaie.backend.model.dto.TeamDto;
 import com.hhaie.backend.model.enums.Game;
 import com.hhaie.backend.repository.PlayerRepository;
 import com.hhaie.backend.repository.TeamRepository;
@@ -40,8 +39,7 @@ public class TeamService {
         List<Player> currentPlayers = team.getPlayers();
         currentPlayers.add(player);
         team.setPlayers(currentPlayers);
-        teamRepository.save(team);
-        return team;
+        return teamRepository.save(team);
     }
 
     public List<Team> getAllTeams() {

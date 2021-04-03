@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -38,5 +39,9 @@ public class Team {
                 ", game=" + game +
                 ", players=" + players +
                 '}';
+    }
+
+    public Team() {
+        this.players = new ArrayList<>();
     }
 }
