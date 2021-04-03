@@ -8,6 +8,7 @@ import com.hhaie.backend.repository.PlayerRepository;
 import com.hhaie.backend.repository.TeamRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -23,6 +24,9 @@ public class TeamService {
     }
 
     public Team createTeam(Team team) {
+        if(team.getPlayers() == null) {
+            team.setPlayers(new ArrayList<>());
+        }
         return teamRepository.save(team);
     }
 
@@ -36,6 +40,11 @@ public class TeamService {
         List<Player> currentPlayers = team.getPlayers();
         currentPlayers.add(player);
         team.setPlayers(currentPlayers);
+        teamRepository.save(team);
         return team;
+    }
+
+    public List<Team> getAllTeams() {
+        return teamRepository.findAll();
     }
 }

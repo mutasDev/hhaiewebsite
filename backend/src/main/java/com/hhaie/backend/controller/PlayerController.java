@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("player")
@@ -24,13 +25,13 @@ public class PlayerController {
 
     @GetMapping(value = "")
     public List<PlayerDto> getPlayers() {
-        return new ArrayList<>();
+        return playerService.getAllPlayers().stream().map(playerMapper::map).collect(Collectors.toList());
     }
 
 
     @PostMapping(value = "/add")
-    public PlayerDto addPlayer(@RequestBody PlayerDto player){
-       PlayerDto dto =  playerMapper.map(playerService.addPlayer(playerMapper.map(player)));
+    public PlayerDto addPlayer(@RequestBody PlayerDto player) {
+        PlayerDto dto = playerMapper.map(playerService.addPlayer(playerMapper.map(player)));
         return dto;
     }
 }

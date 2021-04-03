@@ -24,9 +24,13 @@ public class TeamController {
         this.teamService = teamService;
     }
 
+    @GetMapping
+    public List<TeamDto> getAllTeams() {
+        return this.teamService.getAllTeams().stream().map(teamMapper::map).collect(Collectors.toList());
+    }
     @GetMapping("/game/{game}")
-    public List<TeamDto> getTeamsOfGame(@PathVariable Game game) {
-        return this.teamService.getTeamsOfGame(game).stream().map(teamMapper::map).collect(Collectors.toList());
+    public List<TeamDto> getTeamsOfGame(@PathVariable String game) {
+        return this.teamService.getTeamsOfGame(Game.valueOf(game)).stream().map(teamMapper::map).collect(Collectors.toList());
     }
 
     @PostMapping("/add/{teamId}/{playerId}")
