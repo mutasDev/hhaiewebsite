@@ -7,6 +7,7 @@ import { ImpressumScreenComponent } from './views/impressum-screen/impressum-scr
 import { FAQScreenComponent } from './views/faqscreen/faqscreen.component';
 import { NewsScreenComponent } from './views/news-screen/news-screen.component';
 import { ErstiViewComponent } from './views/ersti-view/ersti-view.component';
+import { AdminScreenComponent } from './components/admin-screen/admin-screen.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'news', component: NewsScreenComponent, pathMatch: "full"},
   { path: 'faq', component: FAQScreenComponent, pathMatch: "full"},
   { path: 'erstis', component: ErstiViewComponent, pathMatch: "full"},
+  { path: 'adminpage', component: AdminScreenComponent, pathMatch: "full"},
   { path: '**', component: HomeScreenComponent},
 ];
 

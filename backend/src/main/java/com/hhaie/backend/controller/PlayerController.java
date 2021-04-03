@@ -23,12 +23,14 @@ public class PlayerController {
 
 
     @GetMapping(value = "")
+    @CrossOrigin
     public List<PlayerDto> getPlayers() {
         return playerService.getAllPlayers().stream().map(playerMapper::map).collect(Collectors.toList());
     }
 
 
     @PostMapping(value = "/add")
+    @CrossOrigin
     public PlayerDto addPlayer(@RequestBody PlayerDto player) {
         PlayerDto dto = playerMapper.map(playerService.addPlayer(playerMapper.map(player)));
         return dto;
