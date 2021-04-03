@@ -21,4 +21,6 @@ public class Player {
     private String pictureId;
 
     private String position;
+
+
 }

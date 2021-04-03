@@ -3,11 +3,13 @@ package com.hhaie.backend.controller;
 import com.hhaie.backend.mapper.PlayerMapper;
 import com.hhaie.backend.model.dto.PlayerDto;
 import com.hhaie.backend.service.PlayerService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController(value = "/player")
+import java.util.ArrayList;
+import java.util.List;
+
+@RestController
+@RequestMapping("player")
 public class PlayerController {
 
     private final PlayerMapper playerMapper;
@@ -20,8 +22,14 @@ public class PlayerController {
     }
 
 
+    @GetMapping(value = "")
+    public List<PlayerDto> getPlayers() {
+        return new ArrayList<>();
+    }
+
+
     @PostMapping(value = "/add")
-    private PlayerDto addPlayer(@RequestBody PlayerDto player){
+    public PlayerDto addPlayer(@RequestBody PlayerDto player){
        PlayerDto dto =  playerMapper.map(playerService.addPlayer(playerMapper.map(player)));
         return dto;
     }

@@ -1,9 +1,13 @@
 package com.hhaie.backend.repository;
 
 import com.hhaie.backend.model.Team;
+import com.hhaie.backend.model.enums.Game;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface TeamRepository extends JpaRepository<Team, Long> {
+    List<Team> findAllByGame(Game game);
 }

@@ -1,5 +1,6 @@
 package com.hhaie.backend.model;
 
+import com.hhaie.backend.model.enums.Game;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,7 +18,11 @@ public class Team {
 
     private String league;
 
+    private Game game;
+
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "team_player")
     private List<Player> players;
+
+
 }

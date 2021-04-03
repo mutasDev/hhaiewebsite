@@ -15,4 +15,5 @@ public class PlayerDto {
     private String pictureId;
 
     private String position;
+
 }

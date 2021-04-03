@@ -19,6 +19,9 @@ databaseChangeLog:
               - column:
                   name:  league
                   type:  varchar(50)
+              - column:
+                  name: game
+                  type: integer
   - changeSet:
       id: create_team_player
       author: mutas
