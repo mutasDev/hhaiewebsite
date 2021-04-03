@@ -25,20 +25,24 @@ public class TeamController {
     }
 
     @GetMapping
+    @CrossOrigin
     public List<TeamDto> getAllTeams() {
         return this.teamService.getAllTeams().stream().map(teamMapper::map).collect(Collectors.toList());
     }
     @GetMapping("/game/{game}")
+    @CrossOrigin
     public List<TeamDto> getTeamsOfGame(@PathVariable String game) {
         return this.teamService.getTeamsOfGame(Game.valueOf(game)).stream().map(teamMapper::map).collect(Collectors.toList());
     }
 
     @PostMapping("/add/{teamId}/{playerId}")
+    @CrossOrigin
     public TeamDto addPlayerToTeam(@PathVariable Long teamId, @PathVariable Long playerId) {
         return teamMapper.map(teamService.addPlayerToTeam(teamId, playerId));
     }
 
     @PostMapping
+    @CrossOrigin
     public TeamDto createTeam(@RequestBody TeamDto dto) {
         Team team = teamMapper.map(dto);
         return teamMapper.map(teamService.createTeam(team));

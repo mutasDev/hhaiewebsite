@@ -24,11 +24,17 @@ import { BottomBarComponent } from "./components/general/bottom-bar/bottom-bar.c
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
+import { MatTableModule } from "@angular/material/table";
 import { MatDialogModule, MatToolbarModule } from "@angular/material";
 import { GameCardComponent } from "./components/game/game-card/game-card.component";
 import { TeamSelectComponent } from "./components/team/team-select/team-select.component";
 import { ErstiViewComponent } from "./views/ersti-view/ersti-view.component";
 import { JoinComponent } from "./components/general/join/join.component";
+import { AdminScreenComponent } from './components/admin-screen/admin-screen.component';
+import { TeamService } from "./services/team.service";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+
+
 
 @NgModule({
   declarations: [
@@ -53,6 +59,7 @@ import { JoinComponent } from "./components/general/join/join.component";
     TeamSelectComponent,
     ErstiViewComponent,
     JoinComponent,
+    AdminScreenComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,9 +68,11 @@ import { JoinComponent } from "./components/general/join/join.component";
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
+    MatTableModule,
     MatDialogModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TeamService],
   bootstrap: [AppComponent],
   entryComponents: [JoinComponent],
 })

@@ -1,4 +1,4 @@
-<app-top-menu></app-top-menu>
-<div style="height: 6%"></div>
+<app-top-menu *ngIf="router.url != '/adminpage'"></app-top-menu>
+<div *ngIf="router.url != '/adminpage'" style="height: 6%"></div>
 <!-- TODO : Add material  and divider-->
 <router-outlet></router-outlet>
