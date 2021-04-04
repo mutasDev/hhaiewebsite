@@ -3,10 +3,11 @@ package com.hhaie.backend.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Data
-public class Player {
+public class Player{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
