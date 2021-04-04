@@ -44,6 +44,7 @@ public class TeamController {
     @GetMapping("/update")
     @CrossOrigin
     public List<TeamDto> updateTeams() throws IOException {
+        this.teamService.clearTeams();
         excelParserService.parseExcelSheet();
         return getAllTeams();
     }

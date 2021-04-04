@@ -12,18 +12,18 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class ExcelParserService {
 
 
     private final TeamService teamService;
+    private final PlayerService playerService;
 
-    public ExcelParserService(TeamRepository teamRepository, TeamService teamService, PlayerRepository playerRepository, PlayerService playerService) {
+    public ExcelParserService(TeamRepository teamRepository, TeamService teamService, PlayerRepository playerRepository, PlayerService playerService, PlayerService playerService1) {
         this.teamService = teamService;
+        this.playerService = playerService1;
     }
 
     public void parseExcelSheet() throws IOException {
@@ -69,7 +69,6 @@ public class ExcelParserService {
 
                 if (!isCellEmpty(row.getCell(3))) {
                     player.setNickName(row.getCell(3).getRichStringCellValue().getString());
-
                 }
                 if (!isCellEmpty(row.getCell(4))) {
                     player.setLastName(row.getCell(4).getRichStringCellValue().getString());

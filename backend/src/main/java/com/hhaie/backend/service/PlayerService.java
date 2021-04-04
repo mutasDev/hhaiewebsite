@@ -2,7 +2,6 @@ package com.hhaie.backend.service;
 
 
 import com.hhaie.backend.model.Player;
-import com.hhaie.backend.model.dto.PlayerDto;
 import com.hhaie.backend.repository.PlayerRepository;
 import org.springframework.stereotype.Service;
 
@@ -21,11 +20,14 @@ public class PlayerService {
         return playerRepository.save(player);
     }
 
-    public Player changePlayerPicture(Long playerId, String fileId) {
+    public List<Player> changePlayerPicture(Long playerId, String fileId) {
         Player player = UtilService.safeFindById(playerRepository, playerId);
-        player.setPictureId(fileId);
-        playerRepository.save(player);
-        return player;
+        List<Player> sameNames = playerRepository.findAllByNickName(player.getNickName());
+        for(Player elem : sameNames) {
+            elem.setPictureId(fileId);
+        }
+        playerRepository.saveAll(sameNames);
+        return sameNames;
     }
 
     public List<Player> getAllPlayers() {

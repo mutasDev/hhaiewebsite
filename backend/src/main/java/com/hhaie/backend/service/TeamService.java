@@ -45,4 +45,8 @@ public class TeamService {
     public List<Team> getAllTeams() {
         return teamRepository.findAll();
     }
+
+    public void clearTeams() {
+        this.teamRepository.deleteAll();
+    }
 }
