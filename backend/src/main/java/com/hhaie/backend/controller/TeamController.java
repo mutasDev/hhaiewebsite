@@ -77,6 +77,7 @@ public class TeamController {
     @CrossOrigin
     public TeamDto removePlayersFromTeam(@PathVariable Long teamId, @RequestBody List<PlayerDto> dto)
     {
+        //test
         for(PlayerDto play : dto)
         {
             System.out.println(play);
