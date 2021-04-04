@@ -19,5 +19,21 @@
       "name": "spring.filepath",
       "type": "java.lang.String",
       "description": "Description for spring.filepath."
-    }
+    },
+    {
+      "name": "file",
+      "type": "java.lang.String",
+      "description": "Description for file."
+    },
+    {
+      "name": "file-dir",
+      "type": "java.lang.String",
+      "description": "Description for file-dir."
+    },
+    {
+      "name": "base-url",
+      "type": "java.lang.String",
+      "description": "Description for base-url."
+    },
+
   ] }

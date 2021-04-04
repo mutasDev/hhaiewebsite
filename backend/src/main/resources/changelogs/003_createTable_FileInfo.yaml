@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: fileinfo create
+      author: copied
+      changes:
+        - createTable:
+            tableName: file_info
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: file_info_pkey
+                  name: id
+                  type: VARCHAR(255)
+
+              - column:
+                  constraints:
+                    nullable: false
+                  name: context_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: filename
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: content_type
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: size
+                  type: BIGINT
+              - column:
+                  name: description
+                  type: VARCHAR(2000)
