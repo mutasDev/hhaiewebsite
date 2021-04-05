@@ -25,7 +25,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatTableModule } from "@angular/material/table";
-import { MatDialogModule, MatToolbarModule } from "@angular/material";
+import { MatDialogModule, MatIconModule, MatProgressBarModule, MatSnackBarModule, MatToolbarModule } from "@angular/material";
 import { GameCardComponent } from "./components/game/game-card/game-card.component";
 import { TeamSelectComponent } from "./components/team/team-select/team-select.component";
 import { ErstiViewComponent } from "./views/ersti-view/ersti-view.component";
@@ -33,6 +33,8 @@ import { JoinComponent } from "./components/general/join/join.component";
 import { AdminScreenComponent } from './components/admin-screen/admin-screen.component';
 import { TeamService } from "./services/team.service";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { FileUploadComponent } from './components/general/file-upload/file-upload.component';
+import { UploadSnackbarComponent } from './components/general/upload-snackbar/upload-snackbar.component';
 
 
 
@@ -60,6 +62,8 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
     ErstiViewComponent,
     JoinComponent,
     AdminScreenComponent,
+    FileUploadComponent,
+    UploadSnackbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,10 +74,13 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
     MatToolbarModule,
     MatTableModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
   ],
   providers: [TeamService],
   bootstrap: [AppComponent],
-  entryComponents: [JoinComponent],
+  entryComponents: [JoinComponent, UploadSnackbarComponent],
 })
 export class AppModule {}

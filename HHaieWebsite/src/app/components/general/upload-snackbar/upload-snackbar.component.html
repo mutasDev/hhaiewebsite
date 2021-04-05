@@ -1,0 +1,23 @@
+<h2>Folgende Dateien werden hochgeladen:</h2>
+<div *ngFor="let file of data" [@fadeInOut]="file.state">
+  <span class="elem">
+    <span>
+      {{ file.data.name }}
+    </span>
+    <mat-progress-bar [value]="file.progress"></mat-progress-bar>
+    <button
+      mat-icon-button
+      (click)="retryFile(file)"
+      [disabled]="!file.canRetry"
+    >
+      <mat-icon>refresh</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      (click)="cancelFile(file)"
+      [disabled]="!file.canCancel"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </span>
+</div>

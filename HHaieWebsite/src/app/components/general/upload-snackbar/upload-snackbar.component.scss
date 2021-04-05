@@ -1,0 +1,14 @@
+.elem {
+    display: grid;
+    grid-template-columns: 8rem auto min-content min-content;
+    grid-column-gap: 0.25rem;
+    align-items: center;
+    margin: 1rem 0;
+  
+    span {
+      margin-right: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: pre;
+    }
+  }

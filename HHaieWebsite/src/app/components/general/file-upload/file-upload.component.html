@@ -1,0 +1,27 @@
+<button
+  *ngIf="!small"
+  mat-raised-button
+  color="primary"
+  (click)="onClick()"
+  [disabled]="disabled"
+>
+  <mat-icon>file_upload</mat-icon>
+  {{ text }}
+</button>
+<button
+  *ngIf="small"
+  mat-icon-button
+  color="primary"
+  (click)="onClick()"
+  [disabled]="disabled"
+>
+  <mat-icon>file_upload</mat-icon>
+</button>
+<input
+  type="file"
+  id="fileUpload"
+  name="fileUpload"
+  [multiple]="multiple"
+  accept="{{ accept }}"
+  style="display: none"
+/>

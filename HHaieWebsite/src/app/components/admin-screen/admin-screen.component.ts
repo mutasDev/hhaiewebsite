@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Team } from 'src/app/model/team';
+import { FileUploadService } from 'src/app/services/file-upload.service';
 import { TeamService } from 'src/app/services/team.service';
 import { resolve } from 'url';
 
@@ -11,7 +12,8 @@ import { resolve } from 'url';
 export class AdminScreenComponent implements OnInit {
 
   constructor(private teamService: TeamService,
-              private cd: ChangeDetectorRef) { }
+    private cd: ChangeDetectorRef
+  ) { }
 
   public teamG: Team[] = []
 
@@ -19,12 +21,12 @@ export class AdminScreenComponent implements OnInit {
   public displayedColumns: string[] = ['Forename', 'Lastname', 'Nickname', 'Position']
 
   ngOnInit() {
-  this.teamService.getTeamsByGame("RL").subscribe((x : Team[]) =>
-  {
-    this.teamG = x;
-  })
+    this.teamService.getTeamsByGame("RL").subscribe((x: Team[]) => {
+      this.teamG = x;
+    })
 
   }
+
 
 
 }
