@@ -55,14 +55,7 @@ public class FileController {
         fileId = storageService.save(file, variableId);
         return fileInfoService.getFileInfoById(fileId, variableId);
     }
-
-    @PutMapping(value = "/thumbnail/")
-    @CrossOrigin
-    public FileInfoDto uploadFile(@RequestParam("file") MultipartFile file) throws FileNotFoundException, FileAlreadyExistsException {
-        String fileId = "";
-        fileId = storageService.save(file, "thumbnail");
-        return fileInfoService.getFileInfoById(fileId, "thumbnail");
-    }
+    
 
 
     @GetMapping(value = "/{contextId}/{fileId}")

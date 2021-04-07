@@ -19,7 +19,6 @@ export class UploadSnackbarComponent implements OnInit{
   constructor(@Inject(MAT_SNACK_BAR_DATA) public data: Array<FileUpload>, private fileUploadService: FileUploadService) { }
 
   ngOnInit() {
-    console.log(this.data);
   }
   cancelFile(file: FileUpload): void {
     this.fileUploadService.cancelFile(file);

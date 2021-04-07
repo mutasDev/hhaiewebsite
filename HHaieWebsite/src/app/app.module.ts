@@ -35,6 +35,7 @@ import { TeamService } from "./services/team.service";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { FileUploadComponent } from './components/general/file-upload/file-upload.component';
 import { UploadSnackbarComponent } from './components/general/upload-snackbar/upload-snackbar.component';
+import { SecureImageComponent } from './components/general/secure-image/secure-image.component';
 
 
 
@@ -64,6 +65,7 @@ import { UploadSnackbarComponent } from './components/general/upload-snackbar/up
     AdminScreenComponent,
     FileUploadComponent,
     UploadSnackbarComponent,
+    SecureImageComponent,
   ],
   imports: [
     BrowserModule,

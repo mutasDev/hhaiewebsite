@@ -19,12 +19,10 @@ export class FileUploadService {
   constructor(private http: HttpClient) {}
 
   uploadFiles(files: Array<FileUpload>, param: string, target: string): void {
-    console.log(files, target);
     this.files = files;
     this.param = param;
     this.target = target;
     this.files.forEach((file) => {
-      console.log(file);
       this.uploadFile(file);
     });
   }
@@ -37,8 +35,6 @@ export class FileUploadService {
     const req = new HttpRequest('POST', "/api/" + this.target,  fd, {
       reportProgress: true,
     });
-    console.log(file);
-    console.log(req);
 
     file.inProgress = true;
     file.sub = this.http

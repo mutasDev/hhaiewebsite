@@ -39,8 +39,9 @@
   </div>
 
 
-  <app-file-upload [multiple]="true" [target]="'file/1'" [accept]="' .jpg, .jpeg, .svg, .png'"></app-file-upload>
+  <app-file-upload (uploadComplete)="this.onUploadFinished($event)" [multiple]="true" [target]="'file/1'" [accept]="' .jpg, .jpeg, .svg, .png'"></app-file-upload>
 
+  <app-secure-image *ngIf="this.imageId" [fileId]="this.imageId"></app-secure-image>
   <!--   @Input() text = 'HOCHLADEN';
   @Input() param = 'file';
   @Input() target = '/api/';

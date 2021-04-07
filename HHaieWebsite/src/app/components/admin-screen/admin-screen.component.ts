@@ -11,6 +11,9 @@ import { resolve } from 'url';
 })
 export class AdminScreenComponent implements OnInit {
 
+
+  public imageId: string;
+
   constructor(private teamService: TeamService,
     private cd: ChangeDetectorRef
   ) { }
@@ -25,6 +28,12 @@ export class AdminScreenComponent implements OnInit {
       this.teamG = x;
     })
 
+  }
+
+
+  onUploadFinished(event: any) {
+    console.log(event);
+    this.imageId = event[0].id;
   }
 
 

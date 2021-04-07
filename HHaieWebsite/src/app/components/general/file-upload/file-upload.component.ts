@@ -40,10 +40,8 @@ export class FileUploadComponent implements OnInit {
     ) as HTMLInputElement;
     fileUpload.onchange = () => {
       // tslint:disable-next-line: prefer-for-of
-      console.log(fileUpload.files.length);
       for (let index = 0; index < fileUpload.files.length; index++) {
         const file = fileUpload.files[index];
-        console.log("f", file);
         let fileUpl: FileUpload = {
           data: file,
           state: 'in',

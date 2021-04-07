@@ -4,7 +4,7 @@ spring:
   liquibase:
     change-log: dbchangelog.yaml
   datasource:
-    url: jdbc:h2:~/productservice-db
+    url: jdbc:h2:~/hhaie-db
     username: sa
     password:
 server:
