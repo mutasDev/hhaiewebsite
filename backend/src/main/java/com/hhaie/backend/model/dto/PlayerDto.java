@@ -2,8 +2,10 @@ package com.hhaie.backend.model.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class PlayerDto {
+public class PlayerDto implements Serializable {
     private Long id;
 
     private String foreName;

@@ -1,15 +1,22 @@
 package com.hhaie.backend.controller;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
+import com.hhaie.backend.mapper.PlayerMapper;
 import com.hhaie.backend.mapper.TeamMapper;
+import com.hhaie.backend.model.Player;
 import com.hhaie.backend.model.Team;
+import com.hhaie.backend.model.dto.PlayerDto;
 import com.hhaie.backend.model.dto.TeamDto;
 import com.hhaie.backend.model.enums.Game;
 import com.hhaie.backend.service.ExcelParserService;
 import com.hhaie.backend.service.TeamService;
+import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
@@ -17,22 +24,26 @@ import java.util.stream.Collectors;
 public class TeamController {
 
     private final TeamMapper teamMapper;
+    private final PlayerMapper playerMapper;
+
 
     private final TeamService teamService;
 
     private final ExcelParserService excelParserService;
 
 
-    public TeamController(TeamMapper teamMapper, TeamService teamService, ExcelParserService excelParserService) {
+    public TeamController(TeamMapper teamMapper, TeamService teamService, ExcelParserService excelParserService, PlayerMapper playerMapper) {
         this.teamMapper = teamMapper;
         this.teamService = teamService;
         this.excelParserService = excelParserService;
+        this.playerMapper = playerMapper;
     }
 
     @GetMapping
     @CrossOrigin
     public List<TeamDto> getAllTeams() {
-        return this.teamService.getAllTeams().stream().map(teamMapper::map).collect(Collectors.toList());
+        List<TeamDto> collect = this.teamService.getAllTeams().stream().map(teamMapper::map).collect(Collectors.toList());
+        return collect;
     }
 
     @GetMapping("/game/{game}")
@@ -61,4 +72,19 @@ public class TeamController {
         Team team = teamMapper.map(dto);
         return teamMapper.map(teamService.createTeam(team));
     }
+
+    @PostMapping("/edit/{teamId}")
+    @CrossOrigin
+    public TeamDto removePlayersFromTeam(@PathVariable Long teamId, @RequestBody List<PlayerDto> dto)
+    {
+        for(PlayerDto play : dto)
+        {
+            System.out.println(play);
+        }
+        System.out.println("test\n" + dto);
+        List<Player> playerList = new ArrayList<Player>();
+        return teamMapper.map(teamService.editTeam(teamId, playerList));
+    }
+
+
 }

@@ -2,6 +2,7 @@ package com.hhaie.backend.service;
 
 import com.hhaie.backend.model.Player;
 import com.hhaie.backend.model.Team;
+import com.hhaie.backend.model.dto.PlayerDto;
 import com.hhaie.backend.model.enums.Game;
 import com.hhaie.backend.repository.PlayerRepository;
 import com.hhaie.backend.repository.TeamRepository;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TeamService {
@@ -41,6 +43,15 @@ public class TeamService {
         team.setPlayers(currentPlayers);
         return teamRepository.save(team);
     }
+
+    public Team editTeam(Long teamId, List<Player> player)
+    {
+        Team team = teamRepository.getById(teamId);
+        System.out.println("HIERHIERHIER" + player);
+
+        return team;
+    }
+
 
     public List<Team> getAllTeams() {
         return teamRepository.findAll();
