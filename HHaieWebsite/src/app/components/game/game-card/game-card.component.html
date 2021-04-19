@@ -5,4 +5,8 @@
   <div class="flex">
     <span class="game_text">{{ this.text }}</span>
   </div>
+  <div class="flex">
+    <app-secure-image [context]="1" [fileId]="this.fileIdd"></app-secure-image>
+    <app-file-upload (uploadComplete)="setPlayerImageId($event)" [target]="'file/1/'"></app-file-upload>
+  </div>
 </div>

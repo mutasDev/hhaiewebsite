@@ -10,6 +10,7 @@ export class GameCardComponent implements OnInit {
   @Input()
   public game: string;
 
+  public fileIdd: string;
   public title: string;
   private titles: Map<string, string> = new Map<string, string>();
   private texts: Map<string, string> = new Map<string, string>();
@@ -101,5 +102,9 @@ export class GameCardComponent implements OnInit {
       "Auch wir steigen mit FIFA in den e-Soccer ein. Wenn ihr beim Aufbau der neuesten Abteilung dabei sein wollt, meldet euch gerne bei uns."
     )
     this.initialize();
+  }
+
+  setPlayerImageId(event: any) {
+    console.log(event);
   }
 }

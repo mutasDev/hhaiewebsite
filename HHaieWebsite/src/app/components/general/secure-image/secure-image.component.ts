@@ -12,6 +12,7 @@ import { map, switchMap } from 'rxjs/operators';
 export class SecureImageComponent implements OnInit {
 
   @Input() public fileId: string = null;
+  @Input() public context: string = "1";
   private fileId$ = new BehaviorSubject(this.fileId);
   dataUrl$ = this.fileId$.pipe(switchMap((fileId) => this.loadFile(fileId)));
 
@@ -27,7 +28,7 @@ export class SecureImageComponent implements OnInit {
 
   public loadImage(url: string): Observable<any> {
     if(!url) return null;
-    return this.http.get(url, { responseType: "blob" }).pipe(
+    return this.http.get(url, { responseType: "blob"}).pipe(
       map((e) => {
         return this.domSanitizer.bypassSecurityTrustResourceUrl(
           URL.createObjectURL(e)
@@ -41,7 +42,7 @@ export class SecureImageComponent implements OnInit {
       return this.loadImage(null);
     }
     return this.loadImage(
-      '/api/file/thumbnail/' + fileId
+      '/api/file/' + this.context + "/" + fileId
     );
   }
 }

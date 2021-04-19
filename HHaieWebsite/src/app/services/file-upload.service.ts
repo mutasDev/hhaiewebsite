@@ -7,7 +7,7 @@ import { catchError, last, map, tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class FileUploadService {
+export class  FileUploadService {
 
 
   files: Array<FileUpload> = [];
@@ -53,6 +53,9 @@ export class FileUploadService {
         tap((message) => {}),
         last(),
         catchError((error: HttpErrorResponse) => {
+          if(error.status == 200) {
+            console.log(error, this.responseBodies);
+          }
           file.inProgress = false;
           file.canRetry = true;
           return of(`${file.data.name} upload failed.`);

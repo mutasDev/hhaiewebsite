@@ -48,16 +48,6 @@ public class FileController {
     }
 
 
-    @PutMapping(value = "/variable/{variableId}")
-    @CrossOrigin
-    public FileInfoDto uploadFile(@RequestParam("file") MultipartFile file, @PathVariable String variableId) throws FileNotFoundException, FileAlreadyExistsException {
-        String fileId = "";
-        fileId = storageService.save(file, variableId);
-        return fileInfoService.getFileInfoById(fileId, variableId);
-    }
-    
-
-
     @GetMapping(value = "/{contextId}/{fileId}")
     @CrossOrigin
     @ResponseBody
@@ -77,21 +67,6 @@ public class FileController {
 
     }
 
-    @GetMapping(value = "/inline/{contextId}/{fileId}")
-    @CrossOrigin
-    @ResponseBody
-    public ResponseEntity<Resource> getFileAsInline(@PathVariable String fileId, @PathVariable String contextId) {
-        Optional<ExtendedResource> optional = storageService.load(fileId, contextId);
-        if (optional.isPresent()) {
-            ExtendedResource extendedResource = optional.get();
-            return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + extendedResource.getFileInfo().getId() + "\"")
-                    .header(HttpHeaders.CONTENT_TYPE, extendedResource.getFileInfo().getContentType())
-                    .header(HttpHeaders.CONTENT_LENGTH, extendedResource.getFileInfo().getSize().toString())
-                    .body(extendedResource.getResource());
-        }
-        return ResponseEntity.notFound().build();
-    }
 
     @DeleteMapping(value = "/{contextId}/{fileId}")
     @CrossOrigin
