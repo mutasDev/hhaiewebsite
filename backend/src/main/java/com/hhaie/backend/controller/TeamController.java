@@ -13,9 +13,13 @@ import com.hhaie.backend.model.enums.Game;
 import com.hhaie.backend.service.ExcelParserService;
 import com.hhaie.backend.service.TeamService;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -75,15 +79,21 @@ public class TeamController {
 
     @PostMapping("/edit/{teamId}")
     @CrossOrigin
-    public TeamDto removePlayersFromTeam(@PathVariable Long teamId, @RequestBody List<PlayerDto> dto)
-    {
-        for(PlayerDto play : dto)
-        {
+    public TeamDto removePlayersFromTeam(@PathVariable Long teamId, @RequestBody List<PlayerDto> dto) {
+        for (PlayerDto play : dto) {
             System.out.println(play);
         }
         System.out.println("test\n" + dto);
         List<Player> playerList = new ArrayList<Player>();
         return teamMapper.map(teamService.editTeam(teamId, playerList));
+    }
+
+    @PostMapping(value = "/parse")
+    @CrossOrigin
+    public List<TeamDto> updateRoster(@RequestParam("file") MultipartFile file) throws IOException {
+        this.teamService.clearDB();
+        this.excelParserService.parseFile(file);
+        return this.getAllTeams();
     }
 
 

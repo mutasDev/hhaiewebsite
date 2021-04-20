@@ -3,10 +3,7 @@
 <div *ngIf="this.teamG">
   <div *ngFor="let item of this.teamG; index as i">
 
-    <h3>
-      <pre
-        class="prettyfont">{{"     " + item.id + "      " + item.name + "      " + item.league + "       " + item.game}}</pre>
-    </h3>
+
     <table mat-table [dataSource]="item.players" class="mat-elevation-z8">
 
       <ng-container matColumnDef="Forename">
@@ -41,15 +38,6 @@
     </div>
   </div>
 
-
-  <app-file-upload (uploadComplete)="this.onUploadFinished($event)" [multiple]="true" [target]="'file/1'" [accept]="' .jpg, .jpeg, .svg, .png'"></app-file-upload>
-
-  <app-secure-image *ngIf="this.imageId" [fileId]="this.imageId"></app-secure-image>
-  <!--   @Input() text = 'HOCHLADEN';
-  @Input() param = 'file';
-  @Input() target = '/api/';
-  @Input() accept = '';
-  @Input() multiple = false;
-  @Input() small: boolean = false;
-  @Input() disabled: boolean = false;-->
-</div>
+  <h1>Roster Table Upload (DANGER, löscht bestehende Roster)</h1>
+  <app-file-upload (uploadComplete)="this.onRosterUploadFinished($event)" [multiple]="true" [target]="'team/parse'" [accept]="' .xlsx'"></app-file-upload>
+  </div>

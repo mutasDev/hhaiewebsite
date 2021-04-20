@@ -60,4 +60,8 @@ public class TeamService {
     public void clearTeams() {
         this.teamRepository.deleteAll();
     }
+
+    public void clearDB() {
+        this.teamRepository.deleteAll();
+    }
 }

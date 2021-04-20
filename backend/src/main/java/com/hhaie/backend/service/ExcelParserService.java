@@ -8,10 +8,12 @@ import com.hhaie.backend.repository.TeamRepository;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 @Service
@@ -42,11 +44,10 @@ public class ExcelParserService {
             Row row = sheet.getRow(i);
             if (isCellEmpty(row.getCell(2))) {
                 rowNotEmpty = false;
-                if(team != null) {
+                if (team != null) {
                     teamService.createTeam(team);
                 }
-            }
-            else {
+            } else {
                 //check teamname
                 if (!isCellEmpty(row.getCell(0))) {
                     // non-empty, so create new team
@@ -90,10 +91,24 @@ public class ExcelParserService {
     }
 
     public boolean isCellEmpty(Cell cell) {
-        if(cell == null) {
+        if (cell == null) {
             return true;
         }
         return cell.getCellTypeEnum().equals(CellType.BLANK);
+    }
+
+    public void parseFile(MultipartFile file) throws IOException {
+        File tempFile = File.createTempFile("prefix", "suffix");
+        file.transferTo(tempFile);
+        InputStream stream = new FileInputStream(tempFile);
+        Workbook workbook = new XSSFWorkbook(stream);
+        parseSheet(workbook.getSheetAt(0), Game.LOL);
+        parseSheet(workbook.getSheetAt(1), Game.RL);
+        parseSheet(workbook.getSheetAt(2), Game.CSGO);
+//        parseSheet(workbook.getSheetAt(3), Game.OW);
+//        parseSheet(workbook.getSheetAt(4), Game.VL);
+//        parseSheet(workbook.getSheetAt(5), Game.HS);
+//        parseSheet(workbook.getSheetAt(6), Game.LOL);
     }
 }
 

@@ -31,9 +31,8 @@ export class AdminScreenComponent implements OnInit {
   }
 
 
-  onUploadFinished(event: any) {
+  onRosterUploadFinished(event: any) {
     console.log(event);
-    this.imageId = event[0].id;
   }
 
 
